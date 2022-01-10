@@ -18,7 +18,7 @@ apt update
 
 # Add base packages
 apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
-apt install papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+apt install feh nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
 mkdir -p ~/.themes ~/.fonts ~/.config ~/Documents ~/Downloads ~/Downloads/build ~/Pictures ~/Pictures/Screenshots ~/Videos 
@@ -65,4 +65,5 @@ mkdir -p /home/$username/.config
 cp -R .config/* /home/$username/.config/
 chown -R $username:$username /home/$username
 chmod +x /home/$username/.config/bspwm/* /home/$username/.config/bspwm/scripts/* /home/$username/.config/bspwm/scripts/i3lock-fancy/* /home/$username/.config/dunst/* /home/$username/.config/kitty/* /home/$username/.config/polybar/* /home/$username/.config/polybar/scripts/* /home/$username/.config/rofi/* /home/$username/.config/sxhkd/* /home/$username/.config/picom.conf
+reboot
 
