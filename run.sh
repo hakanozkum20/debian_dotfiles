@@ -21,7 +21,7 @@ apt install unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar fla
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
-mkdir -p /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents ~/Downloads/home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
+mkdir -p  /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents ~/Downloads/home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
 
 #Getting Qoqir theem
 apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
