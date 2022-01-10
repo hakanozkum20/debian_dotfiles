@@ -15,9 +15,10 @@ dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 
 # Update packages list
 apt update 
+apt upgrade -y
 
 # Add base packages
-apt install wget unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install thunar-font-manager thunar-archive-plugin thunar-media-tags-plugin thunar-data thunar-volman thunar-dropbox-plugin wget unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
@@ -50,9 +51,12 @@ fc-cache -vf
 
 #Fonts
 cd /home/$username/Downloads/
-https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
-https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+unzip FiraCode.zip -d /home/$username/Downloads/Iosevka
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+unzip FiraCode.zip -d /home/$username/Downloads/Hack
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
+unzip FiraCode.zip -d /home/$username/Downloads/DroidSansMono
 
 # Get Rofi Theme Fonts
 apt install font-manager -y
