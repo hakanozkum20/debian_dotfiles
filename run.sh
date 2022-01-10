@@ -22,7 +22,7 @@ apt install thunar-font-manager thunar-archive-plugin thunar-media-tags-plugin t
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
-mkdir -p  /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents ~/Downloads/home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
+mkdir -p  /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents /home/$username//Downloads /home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
 
 #Getting Qoqir theem
 apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
@@ -39,7 +39,7 @@ cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
 
 # Fira Code Nerd Font variant needed
-
+cd /home/$username/Downloads/
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
