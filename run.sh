@@ -17,15 +17,15 @@ dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 apt update 
 
 # Add base packages
-apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
-apt install feh nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+apt install unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
-mkdir -p ~/.themes ~/.fonts ~/.config ~/Documents ~/Downloads ~/Downloads/build ~/Pictures ~/Pictures/Screenshots ~/Videos 
+mkdir -p /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents ~/Downloads/home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
 
 #Getting Qoqir theem
 apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
-cd /home/esta/Downloads/
+cd /home/$username//Downloads/
 git clone https://github.com/vinceliuice/Qogir-theme.git
 cd /Qoqir-theme/
 chmod +x install.sh
@@ -39,24 +39,24 @@ git clone https://github.com/EliverLara/Nordic.git
 
 # Fira Code Nerd Font variant needed
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
-unzip FiraCode.zip -d /usr/share/fonts
+unzip FiraCode.zip -d /home/$username/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
-unzip Meslo.zip -d /usr/share/fonts
+unzip Meslo.zip -d /home/$username/.local/share/fonts
 wget https://github.com/be5invis/Iosevka/releases/download/v11.2.6/ttf-iosevka-11.2.6.zip
-unzip ttf-iosevka-11.2.6.zip -d /usr/share/fonts
+unzip ttf-iosevka-11.2.6.zip -d /home/$username/.local/share/fonts
 fc-cache -vf
 
 
 # Get Rofi Theme Fonts
 apt install font-manager -y
-cd ~/Downloads/
+cd /home/$username/Downloads/
 git clone https://github.com/adi1090x/rofi
 cd rofi/fonts
 mv Comfortaa/* .
 mv Noto_Sans/* .
 rm -r Comfortaa Noto_Sans
-cp * ~/.fonts/
-rm -rf cd ~/Downloads/rofi
+cp * /home/$username/.fonts/
+rm -rf cd /home/$username/Downloads/rofi
 
 
 
