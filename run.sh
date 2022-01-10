@@ -1,4 +1,6 @@
 #!/bin/bash
+# sh lerin hepsine chmod ver sudo ile ve quoqir i düzelt. 
+#
 
 # Change Debian to SID Branch
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -12,7 +14,7 @@ builddir=$(pwd)
 dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 
 # Update packages list
-apt update
+apt update 
 
 # Add base packages
 apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
@@ -22,12 +24,12 @@ apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacod
 mkdir -p ~/.themes ~/.fonts ~/.config ~/Documents ~/Downloads ~/Downloads/build ~/Pictures ~/Pictures/Screenshots ~/Videos 
 
 #Getting Qoqir theem
-apt-get install gtk2-engines-murrine gtk2-engines-pixbuf
+apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
 cd /home/esta/Downloads/
 git clone https://github.com/vinceliuice/Qogir-theme.git
 cd /Qoqir-theme/
 chmod +x install.sh
-./install.sh -c dark -t standard
+./install.sh
 
 
 
@@ -46,7 +48,7 @@ fc-cache -vf
 
 
 # Get Rofi Theme Fonts
-apt-get install font-manager
+apt install font-manager -y
 cd ~/Downloads/
 git clone https://github.com/adi1090x/rofi
 cd rofi/fonts
@@ -62,3 +64,5 @@ cd $builddir
 mkdir -p /home/$username/.config
 cp -R .config/* /home/$username/.config/
 chown -R $username:$username /home/$username
+chmod +x ~/.config/bspwm/* ~/.config/bspwm/scripts/* ~/.config/bspwm/scripts/i3lock-fancy/* ~/.config/dunst/* ~/.config/kitty/* ~/.config/polybar/* ~/.config/polybar/scripts/* ~/.config/rofi/* ~/.config/sxhkd/* ~/.config/picom.conf
+
