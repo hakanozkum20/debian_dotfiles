@@ -17,7 +17,7 @@ dpkg -i 'Custom Packages/rofi_1.7.0-1_amd64.deb'
 apt update 
 
 # Add base packages
-apt install unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install wget unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
@@ -38,6 +38,7 @@ cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
 
 # Fira Code Nerd Font variant needed
+
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
 unzip FiraCode.zip -d /home/$username/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
@@ -46,6 +47,12 @@ wget https://github.com/be5invis/Iosevka/releases/download/v11.2.6/ttf-iosevka-1
 unzip ttf-iosevka-11.2.6.zip -d /home/$username/.local/share/fonts
 fc-cache -vf
 
+
+#Fonts
+cd /home/$username/Downloads/
+https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
+https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
 
 # Get Rofi Theme Fonts
 apt install font-manager -y
