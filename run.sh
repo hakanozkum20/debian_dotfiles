@@ -64,5 +64,5 @@ cd $builddir
 mkdir -p /home/$username/.config
 cp -R .config/* /home/$username/.config/
 chown -R $username:$username /home/$username
-chmod +x ~/.config/bspwm/* ~/.config/bspwm/scripts/* ~/.config/bspwm/scripts/i3lock-fancy/* ~/.config/dunst/* ~/.config/kitty/* ~/.config/polybar/* ~/.config/polybar/scripts/* ~/.config/rofi/* ~/.config/sxhkd/* ~/.config/picom.conf
+chmod +x /home/$username/.config/bspwm/* /home/$username/.config/bspwm/scripts/* /home/$username/.config/bspwm/scripts/i3lock-fancy/* /home/$username/.config/dunst/* /home/$username/.config/kitty/* /home/$username/.config/polybar/* /home/$username/.config/polybar/scripts/* /home/$username/.config/rofi/* /home/$username/.config/sxhkd/* /home/$username/.config/picom.conf
 
