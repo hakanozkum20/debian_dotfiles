@@ -18,7 +18,7 @@ apt update
 
 # Add base packages
 apt install unzip picom bspwm polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
-apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
+apt install papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
 mkdir -p ~/.themes ~/.fonts ~/.config ~/Documents ~/Downloads ~/Downloads/build ~/Pictures ~/Pictures/Screenshots ~/Videos 
