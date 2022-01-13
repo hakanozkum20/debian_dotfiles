@@ -49,3 +49,6 @@ wget https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/10702/wps
 sudo apt install ~/Downloads/wps-office_11.1.0.10702.XA_amd64.deb
 sudo rm -f ~/Downloads/wps-office_11.1.0.10702.XA_amd64.deb
 
+
+sudo reboot
+
