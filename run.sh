@@ -23,6 +23,10 @@ apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance font
 
 #Local Folders
 mkdir -p /home/$username/Desktop /home/$username/Musics /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents /home/$username//Downloads /home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
+ 
+ #Nitrogen
+ cp monitor.sh /home/$username/.screenlayout/
+
 
 #Getting Qoqir theem
 apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
