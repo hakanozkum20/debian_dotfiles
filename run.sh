@@ -18,7 +18,7 @@ apt update
 apt upgrade -y
 
 # Add base packages
-apt install thunar-font-manager thunar-archive-plugin thunar-media-tags-plugin thunar-data thunar-volman thunar-dropbox-plugin wget unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
+apt install nautilus nautilus-extension-brasero nautilus-font-manager nautilus-sendto nautilus-admin nautilus-extension-burner nautilus-gtkhash nautilus-share nautilus-data nautilus-hide nautilus-filename-repairer nautilus-scripts-manager wget unzip arandr picom bspwm mousepad polybar sddm rofi kitty thunar flameshot neofetch sxhkd git lxpolkit lxappearance xorg -y
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
@@ -41,6 +41,9 @@ chmod +x install.sh
 # Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
+
+
+
 
 # Fira Code Nerd Font variant needed
 cd /home/$username/Downloads/
