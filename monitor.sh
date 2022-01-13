@@ -1,2 +1,2 @@
 #!/bin/sh
-xrandr --outpout Virtual1 --mode 1920x1080
+xrandr --output Virtual1 --mode 1920x1080
