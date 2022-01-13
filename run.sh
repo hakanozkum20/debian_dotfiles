@@ -85,5 +85,5 @@ chmod +x /home/$username/.screenlayout/monitor.sh /home/$username/.config/bspwm/
 cd /home/$username/Debian_dotfiles
 cp -R background.jpg /home/$username/Pictures/
 nitrogen --set-auto /home/$username/Pictures/background.jpg --save
-reboot
+
 
