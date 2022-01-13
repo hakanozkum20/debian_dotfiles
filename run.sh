@@ -22,7 +22,7 @@ apt install thunar-font-manager thunar-archive-plugin thunar-media-tags-plugin t
 apt install nitrogen papirus-icon-theme firefox xfce4-settings lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 #Local Folders
-mkdir -p  /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents /home/$username//Downloads /home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
+mkdir -p /home/$username/Desktop /home/$username/Musics /home/$username/.screenlayout /home/$username/.themes /home/$username/.fonts /home/$username/.config /home/$username/Documents /home/$username//Downloads /home/$username/Downloads/build /home/$username/Pictures /home/$username/Pictures/Screenshots /home/$username/Videos 
 
 #Getting Qoqir theem
 apt install gtk2-engines-murrine gtk2-engines-pixbuf -y
@@ -41,22 +41,20 @@ git clone https://github.com/EliverLara/Nordic.git
 # Fira Code Nerd Font variant needed
 cd /home/$username/Downloads/
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
-unzip FiraCode.zip -d /home/$username/.local/share/fonts
+unzip FiraCode.zip -d /usr/share/fonts/FireCode
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/Meslo.zip
-unzip Meslo.zip -d /home/$username/.local/share/fonts
+unzip Meslo.zip -d /usr/share/fonts/Meslo
 wget https://github.com/be5invis/Iosevka/releases/download/v11.2.6/ttf-iosevka-11.2.6.zip
 unzip ttf-iosevka-11.2.6.zip -d /home/$username/.local/share/fonts
-fc-cache -vf
 
-
-#Fonts
 cd /home/$username/Downloads/
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Iosevka.zip
-unzip FiraCode.zip -d /home/$username/Downloads/Iosevka
+unzip Iosevka.zip -d /usr/share/fonts/Iosevka
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
-unzip FiraCode.zip -d /home/$username/Downloads/Hack
+unzip Hack.zip -d /usr/share/fonts/Hack
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
-unzip FiraCode.zip -d /home/$username/Downloads/DroidSansMono
+unzip DroidSansMono -d /usr/share/fonts/DroidSansMono
+fc-cache -vf
 
 # Get Rofi Theme Fonts
 apt install font-manager -y
@@ -73,8 +71,11 @@ rm -rf cd /home/$username/Downloads/rofi
 
 cd $builddir
 mkdir -p /home/$username/.config
+
 cp -R .config/* /home/$username/.config/
 chown -R $username:$username /home/$username
-chmod +x /home/$username/.config/bspwm/* /home/$username/.config/bspwm/scripts/* /home/$username/.config/bspwm/scripts/i3lock-fancy/* /home/$username/.config/dunst/* /home/$username/.config/kitty/* /home/$username/.config/polybar/* /home/$username/.config/polybar/scripts/* /home/$username/.config/rofi/* /home/$username/.config/sxhkd/* /home/$username/.config/picom.conf
+chmod +x /home/$username/.screenlayout/monitor.sh /home/$username/.config/bspwm/* /home/$username/.config/bspwm/scripts/* /home/$username/.config/bspwm/scripts/i3lock-fancy/* /home/$username/.config/dunst/* /home/$username/.config/kitty/* /home/$username/.config/polybar/* /home/$username/.config/polybar/scripts/* /home/$username/.config/rofi/* /home/$username/.config/sxhkd/* /home/$username/.config/picom.conf
+cd /Debian_dotfiles
+cp -R background.jpg /home/$username/Pictures/
 reboot
 
